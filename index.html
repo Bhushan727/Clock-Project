@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clock XD</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="main_container">
+
+        <div class="left_container">
+            <div class="lef_header">
+                <img src="clock_logo.png" alt="clock_logo">
+                <div class="instruction">
+                    The message and image will change according to the time
+                </div>
+            </div>
+            <div class="timeContent">
+                <div class="innerCont">
+                    <div class="timeDiv" id="firstD">
+                        <img src="wake_up.png" alt="">
+                        <span class="setText">Set wake up time</span>
+
+                        <select class="options" name="wake" id="wakeup">
+                            
+                            <option value="8" selected="selected">8 AM - 9 AM</option>
+                            <option value="9">9 AM - 10 AM</option>
+                            <option value="10">10 AM - 11 AM</option>
+                            <option value="11">11 AM - 12 PM</option>
+
+                        </select>
+
+                    </div>
+                        <div class="space"></div>
+                    <div class="timeDiv" id="secondD">
+                        <img src="lunch_time.png" alt="">
+                        <span class="setText">Set lunch time</span>
+                        <select class="options" name="lunck" id="lunch">
+                            
+                            <option value="12" selected="selected">12 PM - 1 PM</option>
+                            <option value="13">1 PM - 2 PM</option>
+                            <option value="14">2 PM - 3 PM</option>
+                            <option value="15">3 PM - 4 PM</option>
+
+                        </select>
+
+                    </div>
+                        <div class="space"></div>
+                    <div class="timeDiv" id="thirdD">
+                        <img src="nap_time.png" alt="">
+                        <span class="setText">Set nap time</span>
+                        <select class="options" name="nap" id="nap">
+                            <!-- <option value="null">--- Select Time ---</option> -->
+                            <option value="16" selected="selected">4 PM - 5 PM</option>
+                            <option value="17">5 PM - 6 PM</option>
+                            <option value="18">6 PM - 7 PM</option>
+                            <option value="19">7 PM - 8 PM</option>
+
+                        </select>
+                    </div>
+                        <div class="space"></div>
+                    <div class="timeDiv" id="fourthD">
+                        <img src="sleep.png" alt="" id="sleepImg">
+                        <span class="setText">Set night time</span>
+                        <select class="options" name="night" id="sleep">
+                           
+                            <option value="20" selected="selected">8 PM - 9 PM</option>
+                            <option value="21">9 PM - 10 PM</option>
+                            <option value="22">10 PM - 11 PM</option>
+                            <option value="23">11 PM - 12 AM</option>
+                            <option value="24">12 AM - 1 AM</option>
+                            <option value="1">1 AM - 2 AM</option>
+                            <option value="2">2 AM - 3 AM</option>
+                            <option value="3">3 AM - 4 AM</option>
+                            <option value="4">4 AM - 5 AM</option>
+                            <option value="5">5 AM - 6 AM</option>
+                            <option value="6">6 AM - 7 AM</option>
+                            <option value="7">7 AM - 8 AM</option>
+                            
+                            
+
+                        </select>
+                    </div>
+
+
+                </div>
+            </div>
+            <div class="greetMsg">
+                <p id="gMsg"> Hi ! , HOW's YOUR DAY..!!</p>
+                
+            </div>
+
+            <div class="alarmBtn" onclick="setAlarm()" onmouseenter="changeBtn()" onmouseout="changeBtn2()">Set Alarm</div>
+            <div class="alarmMsg">
+                WakeUp Time : <span id="wakeT">--- select time ---</span><br>
+                Lunch Time : <span id="lunchT">--- select time ---</span><br>
+                Nap Time : <span id="napT">--- select time ---</span><br>
+                Night Time : <span id="nightT">--- select time ---</span>
+            </div>
+
+        </div>
+        <div class="right_container">
+            <div class="timer_div">
+                <div class="digiClock" id="firstDivClock">TIME</div>
+                <div class="digiClock" id="hourDiv">
+                    <div class="digit" id="hour">00</div>
+                    <p class="tCaption">hours</p>
+                </div>
+                <span class="coln">:</span>
+                <div class="digiClock" id="minuteDiv">
+                    <div class="digit" id="minute">00</div>
+                    <p class="tCaption">Minute</p>
+                </div><span class="coln">:</span>
+                <div class="digiClock" id="secondDiv">
+                    <div class="digit" id="second">00</div>
+                    <p class="tCaption">Second</p>
+                </div>
+                <div class="digiClock" id="amPm">AM</div>
+            </div>
+            <div class="secondLayer"> </div>
+            <div class="thirdLayer"></div>
+            <div id="timeMsg">
+                RUNNING OUT OF TIME !!!
+            </div>
+            <div id="wallpaper">
+                <img id="imageC" src="lunch.png" alt="">
+            </div>
+
+        </div>
+
+
+    </div>
+
+
+    <script src="script.js"></script>
+</body>
+</html>
