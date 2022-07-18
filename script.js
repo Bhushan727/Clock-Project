@@ -19,7 +19,7 @@ function changeBtn2()
 {
     document.getElementsByClassName('alarmBtn')[0].innerText = "Set Alarm";
 }
-
+//sairam
 
 var firstOpt = firstElem.options[firstElem.selectedIndex].value;
   
